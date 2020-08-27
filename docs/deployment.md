@@ -31,9 +31,13 @@ Options:
   --host TEXT                     Bind socket to this host.  [default:
                                   127.0.0.1]
   --port INTEGER                  Bind socket to this port.  [default: 8000]
-  --uds TEXT                      Bind to a UNIX domain socket.
+  --uds TEXT                      Bind to a UNIX domain socket. Not valid
+                                  with --reload.
   --fd INTEGER                    Bind to socket from this file descriptor.
-  --reload                        Enable auto-reload.
+                                  Not valid with --reload.
+  --reload                        Enable auto-reload. Use only during
+                                  development and if listening on a network
+                                  socket.
   --reload-dir TEXT               Set reload directories explicitly, instead
                                   of using the current working directory.
   --workers INTEGER               Number of worker processes. Defaults to the
